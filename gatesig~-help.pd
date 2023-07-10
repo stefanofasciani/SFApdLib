@@ -1,0 +1,22 @@
+#N canvas 65 65 1375 807 12;
+#X text 14 97 (c) Stefano Fasciani \, 2020;
+#X obj 58 158 osc~ 440;
+#X obj 57 288 *~ 0.2;
+#X obj 57 333 dac~;
+#X obj 139 159 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X floatatom 213 161 5 0 0 0 - - - 0;
+#X text 18 27 arguments: transition ramp time in milliseconds;
+#X text 19 71 outlets: gated signal;
+#X text 17 7 gatesig~ acts as a gate propagating the input signal from
+input to output according to the value on the second inlet, f 117
+;
+#X text 18 47 inlets: signal \, gate status (1 open \, 0 closed) \,
+ramp time in milliseconds, f 74;
+#X obj 57 232 sfalib/gatesig~ 50;
+#X connect 1 0 10 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 4 0 10 1;
+#X connect 5 0 10 2;
+#X connect 10 0 2 0;

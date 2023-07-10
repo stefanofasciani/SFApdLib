@@ -1,0 +1,27 @@
+#N canvas 485 65 955 807 12;
+#X text 14 97 (c) Stefano Fasciani \, 2020;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array array99 2000 float 0;
+#X coords 0 1.2 1999 -0.2 200 100 1 0 0;
+#X restore 70 386 graph;
+#X obj 75 309 metro 500;
+#X obj 59 333 tabwrite~ array99;
+#X floatatom 59 168 5 0 1 0 - - - 0;
+#X obj 129 269 loadbang;
+#X text 17 7 pwmled~ generates a pwm signal to control the brightess
+of an LED connectd to an output driven by a signel in the range 0-1
+, f 126;
+#X text 19 71 outlets: pwm signal to drive LED;
+#X obj 62 141 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X text 14 27 arguments: pwm frequency (should be in the range 25 to
+100 Hz), f 113;
+#X text 18 47 inlets: pwm duty cycle (between 0 (0%) and 1 (100%);
+#X obj 60 198 sig~;
+#X obj 59 231 sfalib/pwmled~ 50;
+#X connect 2 0 3 0;
+#X connect 4 0 11 0;
+#X connect 5 0 2 0;
+#X connect 8 0 4 0;
+#X connect 11 0 12 0;
+#X connect 12 0 3 0;
