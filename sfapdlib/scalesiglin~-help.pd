@@ -5,15 +5,12 @@
 #X floatatom 57 380 5 0 0 0 - - - 0;
 #X obj 171 305 metro 100;
 #X obj 173 268 loadbang;
-#X text 18 27 arguments: input_min input_max output_min output_max
-;
-#X text 18 47 inlets: signal input_min input_max output_min output_max
-;
+#X text 18 27 arguments: input_min input_max output_min output_max;
+#X text 18 47 inlets: signal input_min input_max output_min output_max;
 #X text 19 71 outlets: scaled signal;
 #X text 14 97 (c) Stefano Fasciani \, 2020;
-#X text 17 7 scalesiglin~ scales linearly a signal from input to output
-range, f 67;
-#X obj 57 231 sfalib/scalesiglin~ 0 16 0.5 2.5;
+#X text 17 7 scalesiglin~ scales linearly a signal from input to output range, f 67;
+#X obj 57 231 sfapdlib/scalesiglin~ 0 16 0.5 2.5;
 #X connect 0 0 1 0;
 #X connect 1 0 11 0;
 #X connect 2 0 3 0;

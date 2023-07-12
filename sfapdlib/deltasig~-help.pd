@@ -4,8 +4,7 @@
 #X obj 351 517 metro 100;
 #X obj 376 468 loadbang;
 #X text 14 97 (c) Stefano Fasciani \, 2020;
-#X text 17 7 deltasig~ calculates the differential of a signal, f
-50;
+#X text 17 7 deltasig~ calculates the differential of a signal, f 50;
 #X text 18 27 arguments:;
 #X text 18 47 inlets: signal;
 #X text 19 71 outlets: differential;
@@ -20,12 +19,11 @@
 #X floatatom 208 590 5 0 0 0 - - - 0;
 #X text 31 569 velocity;
 #X text 279 578 acceleration;
-#X text 300 324 computing velocity;
-#X text 302 379 computing acceleration;
-#X obj 174 197 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 0 1;
-#X obj 177 321 sfalib/deltasig~;
-#X obj 180 376 sfalib/deltasig~;
+#X text 321 323 computing velocity;
+#X text 323 378 computing acceleration;
+#X obj 174 197 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 177 321 sfapdlib/deltasig~;
+#X obj 180 376 sfapdlib/deltasig~;
 #X connect 0 0 1 0;
 #X connect 2 0 0 0;
 #X connect 2 0 16 0;
